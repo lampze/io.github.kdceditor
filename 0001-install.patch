@@ -1,0 +1,51 @@
+From 06e646e6b3ddcd193b5174f193425a4af1807b94 Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Thu, 15 Aug 2024 09:43:38 +0800
+Subject: [PATCH] install
+
+---
+ KDCEditor.desktop | 11 +++++++++++
+ KDCEditor.pro     | 10 ++++++++++
+ 2 files changed, 21 insertions(+)
+ create mode 100644 KDCEditor.desktop
+
+diff --git a/KDCEditor.desktop b/KDCEditor.desktop
+new file mode 100644
+index 0000000..c8906f0
+--- /dev/null
++++ b/KDCEditor.desktop
+@@ -0,0 +1,11 @@
++[Desktop Entry]
++Categories=Accessibility;Qt;Utility;
++Exec=KDCEditor
++Name=KDCEditor
++Name[zh_CN]=KDCEditor
++Icon=kirby
++StartupNotify=false
++Terminal=false
++Type=Application
++GenericName=KDCEditor
++Version=1.13
+\ No newline at end of file
+diff --git a/KDCEditor.pro b/KDCEditor.pro
+index 0b37ea6..7c8dcd9 100644
+--- a/KDCEditor.pro
++++ b/KDCEditor.pro
+@@ -87,3 +87,13 @@ OTHER_FILES += \
+     src/TODO.txt \
+     src/coursefiles.txt \
+     src/windows.rc
++
++
++
++target.path = $$PREFIX/bin
++desktop.files = KDCEditor.desktop
++desktop.path = $$PREFIX/share/applications/
++icons.path = $$PREFIX/share/icons
++icons.files = src/images/kirby.png
++
++INSTALLS += target desktop icons
+\ No newline at end of file
+-- 
+2.43.4
+
